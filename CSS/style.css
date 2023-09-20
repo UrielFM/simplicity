@@ -60,7 +60,14 @@ nav h2 a {
     background-color: var(--cor-intermediaria);
 }
 
-.menu {list-style: none;}
+/* Regra da lista ul de links */
+.menu {
+    list-style: none;
+/* ATENÇÃO!
+Usamos display:nome para não exibir inicialmente a lista de links */
+    display: none;
+}
+
 
 /* Regra para formatar os links contidos na lista/menu */
 .menu a {
@@ -70,4 +77,26 @@ nav h2 a {
     align-items: center;
     justify-content: center;
     height: 50px;
+}
+
+
+
+/* Seletor de classes combinadas.
+Esta regra somente irá funcionar quando AS DUAS CLASSES estiverem aplicadas JUNTAS no elememto HTML (no caso, na lista de menu/links).
+
+Obs.: esta combinação será possível por meio da manipulação programada com JavaScript.*/
+.menu.aberto {
+/* Aplicar um fundo á lista evitando a dificuldade de leitura dos links. */
+    background-color: var(--cor-clara);
+
+/* O Flex fará a lista de links aparecer */
+    display: flex;
+
+/* Com os links em forma de coluna (vertical) */
+    flex-direction:column;
+
+/* Usamos as propriedades de posicionamento e coordenadas para garantir o encaixe correwto (abaixo do titulo e da palavra Menu}. */
+    position: absolute;
+    left: 0;
+    right: 0;
 }
