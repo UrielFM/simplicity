@@ -27,3 +27,26 @@ body, h1, h2, p, figure, .menu{
 
 img {max-width: 100%;}
 
+h1 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+h1 a {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+}
+a {text-decoration: none;}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {list-style: none;}
+
