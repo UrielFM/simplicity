@@ -46,6 +46,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 10vh;
 }
 
 /* Formatação da palavra Menu */
@@ -102,24 +103,21 @@ Obs.: esta combinação será possível por meio da manipulação programada com
 }
 
 .destaque {
-    height: 500px;
+    height: 90vh;
     background-image: url(../img/fundo-destaque.jpg);
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    color: var(--cor-clara);
+    text-align: center;
 }
 
 .destaque h2 {
     font-size: 3rem;
-    color: var(--cor-clara);
-    text-align: center;
 }
 
 .destaque p {
     font-size: 1rem;
-    color: var(--cor-clara);
-    text-align: center;
-
 }
