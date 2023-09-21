@@ -113,7 +113,11 @@ Obs.: esta combinação será possível por meio da manipulação programada com
     color: var(--cor-clara);
     text-align: center;
 }
-
+.destaque h2, .destaque p {
+    animation-duration: 4s;
+    animation-name: animaDestaque;
+    animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+}
 .destaque h2 {
        /* Função clamp (tamanho minimo, ideal, tamanho máximo) */
     font-size: clamp(3rem, 10vw,7rem);
@@ -123,3 +127,11 @@ Obs.: esta combinação será possível por meio da manipulação programada com
     font-size: clamp(1rem,3vw ,3rem);
 }
 
+/* Regras de Animação */
+@keyframes animaDestaque {
+    from {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    to {opacity: 1;}
+}
