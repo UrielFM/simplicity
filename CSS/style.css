@@ -103,21 +103,23 @@ Obs.: esta combinação será possível por meio da manipulação programada com
 
 .destaque {
     height: 500px;
-    background-attachment:fixed;
     background-image: url(../img/fundo-destaque.jpg);
+    background-attachment: fixed;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .destaque h2 {
     font-size: 3rem;
     color: var(--cor-clara);
+    text-align: center;
 }
 
 .destaque p {
     font-size: 1rem;
     color: var(--cor-clara);
+    text-align: center;
 
 }
