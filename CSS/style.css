@@ -115,9 +115,11 @@ Obs.: esta combinação será possível por meio da manipulação programada com
 }
 
 .destaque h2 {
-    font-size: 3rem;
+       /* Função clamp (tamanho minimo, ideal, tamanho máximo) */
+    font-size: clamp(3rem, 10vw,7rem);
 }
 
 .destaque p {
-    font-size: 1rem;
+    font-size: clamp(1rem,3vw ,3rem);
 }
+
