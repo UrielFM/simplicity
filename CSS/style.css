@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Raleway:wght@700;800&display=swap');
 
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 :root {
     /* Variáveis para palta de cores do site.*/
@@ -8,10 +10,12 @@
     --cor-texto: #333;
     --cor-escura: #000;
     --cor-clara: #fff;
-    --cor-intermediaria:#ececec;
+    --cor-intermediaria: #ececec;
 }
 
-html {font-size: 16px;}
+html {
+    font-size: 16px;
+}
 
 body {
     color: var(--cor-texto);
@@ -20,12 +24,19 @@ body {
 }
 
 /* CSS Reset em alguns elementos */
-body, h1, h2, p, figure, .menu{
+body,
+h1,
+h2,
+p,
+figure,
+.menu {
     margin: 0;
     padding: 0;
 }
 
-img {max-width: 100%;}
+img {
+    max-width: 100%;
+}
 
 h1 {
     font-family: 'Raleway', sans-serif;
@@ -40,7 +51,10 @@ h1 a {
     padding: 0.3rem 1rem;
     border-radius: 10px;
 }
-a {text-decoration: none;}
+
+a {
+    text-decoration: none;
+}
 
 header {
     position: sticky;
@@ -64,14 +78,17 @@ nav h2 a {
     display: inline-block;
 }
 
-.menu a:hover, .menu a:focus, nav h2 a:hover, nav h2 a:focus {
+.menu a:hover,
+.menu a:focus,
+nav h2 a:hover,
+nav h2 a:focus {
     background-color: var(--cor-intermediaria);
 }
 
 /* Regra da lista ul de links */
 .menu {
     list-style: none;
-/* ATENÇÃO!
+    /* ATENÇÃO!
 Usamos display:nome para não exibir inicialmente a lista de links */
     display: none;
 }
@@ -94,16 +111,16 @@ Esta regra somente irá funcionar quando AS DUAS CLASSES estiverem aplicadas JUN
 
 Obs.: esta combinação será possível por meio da manipulação programada com JavaScript.*/
 .menu.aberto {
-/* Aplicar um fundo á lista evitando a dificuldade de leitura dos links. */
+    /* Aplicar um fundo á lista evitando a dificuldade de leitura dos links. */
     background-color: var(--cor-clara);
 
-/* O Flex fará a lista de links aparecer */
+    /* O Flex fará a lista de links aparecer */
     display: flex;
 
-/* Com os links em forma de coluna (vertical) */
-    flex-direction:column;
+    /* Com os links em forma de coluna (vertical) */
+    flex-direction: column;
 
-/* Usamos as propriedades de posicionamento e coordenadas para garantir o encaixe correwto (abaixo do titulo e da palavra Menu}. */
+    /* Usamos as propriedades de posicionamento e coordenadas para garantir o encaixe correwto (abaixo do titulo e da palavra Menu}. */
     position: absolute;
     left: 0;
     right: 0;
@@ -118,20 +135,23 @@ Obs.: esta combinação será possível por meio da manipulação programada com
     justify-content: center;
     flex-direction: column;
 }
-.destaque h2, .destaque p {
+
+.destaque h2,
+.destaque p {
     color: var(--cor-clara);
     text-align: center;
     animation-duration: 3s;
     animation-name: animaDestaque;
     animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
 }
+
 .destaque h2 {
-       /* Função clamp (tamanho minimo, ideal, tamanho máximo) */
-    font-size: clamp(3rem, 10vw,7rem);
+    /* Função clamp (tamanho minimo, ideal, tamanho máximo) */
+    font-size: clamp(3rem, 10vw, 7rem);
 }
 
 .destaque p {
-    font-size: clamp(1rem,3vw ,3rem);
+    font-size: clamp(1rem, 3vw, 3rem);
 }
 
 /* Regras de Animação */
@@ -140,8 +160,12 @@ Obs.: esta combinação será possível por meio da manipulação programada com
         opacity: 0;
         transform: translateY(-500px);
     }
-    to {opacity: 1;}
+
+    to {
+        opacity: 1;
+    }
 }
+
 article h2 {
     padding: 1rem;
     font-size: 1.5rem;
@@ -149,7 +173,9 @@ article h2 {
     color: var(--cor-titulo);
 }
 
-.front-end, .historia, .localizacao {
+.front-end,
+.historia,
+.localizacao {
     text-align: center;
 
 }
@@ -185,7 +211,7 @@ abbr {
     width: 100%;
     max-width: 700px;
     margin-bottom: 2rem;
-    
+
 }
 
 .localizacao iframe {
@@ -208,4 +234,38 @@ footer {
     justify-content: center;
     text-align: center;
     font-size: 0.8rem;
+}
+
+@media screen and (min-width: 570px) {
+
+    header .menuBx {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    nav {
+        width: 70%;
+    }
+
+    figure img {
+        height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    * {
+        font-size: 30px;
+    }
+
+    .limit {
+        max-width: 1000px;
+    }
 }
