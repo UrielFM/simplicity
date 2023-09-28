@@ -253,7 +253,7 @@ footer {
         width: 70%;
     }
 
-    figure img {
+    .front-end img {
         height: 200px;
     }
 
@@ -262,7 +262,7 @@ footer {
 @media screen and (min-width: 900px) {
 
     * {
-        font-size: 30px;
+        font-size: 18px;
     }
 
     .limit {
