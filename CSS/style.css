@@ -251,6 +251,33 @@ footer {
     margin-bottom: 1rem;
 }
 
+table {
+    width: 80%;
+    margin: auto;
+}
+
+table, th, td {
+    border: solid 1px;
+    border-collapse: collapse;  /* Remove os espaços entre as bordas */
+    text-align: center;
+}
+
+caption{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+}
+
+th {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border-color: var(--cor-titulo);
+    padding: 0.7rem;
+}
+td {
+    padding: 0.4rem;
+}
 
 
 
