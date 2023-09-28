@@ -43,6 +43,13 @@ h1 a {
 a {text-decoration: none;}
 
 header {
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-clara);
+}
+
+/* Menu fixo no topo */
+header .limit {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -189,7 +196,7 @@ abbr {
 .limit {
     margin: auto;
     width: 95vw;
-    }
+}
 
 footer {
     background-color: var(--cor-escura);
