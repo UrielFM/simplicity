@@ -259,7 +259,7 @@ table {
 table, th, td {
     border: solid 1px;
     border-collapse: collapse;  /* Remove os espaços entre as bordas */
-    text-align: center;
+   
 }
 
 caption{
@@ -279,7 +279,13 @@ td {
     padding: 0.4rem;
 }
 
+td:nth-child(2) { text-align: center;}
 
+th:last-child, td:last-child{ text-align: right;}
+
+th:first-child{text-align: left;}
+
+tr:nth-child(even) { background-color: var(--cor-clara);}
 
 /* Medias Query Gerais */
 @media screen and (min-width: 570px) {
