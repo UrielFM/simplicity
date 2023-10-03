@@ -299,6 +299,7 @@ td:last-child::before {
 
 .produtos::after { content: " 💸";}
 .serviços::after { content: " 👨‍💻";}
+.contato::after {}
 
 .imgBx{text-align: center;}
 

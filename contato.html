@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Simplicity</title>
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="limit">
+            <h1><a href="index.html">Simplicity</a></h1>
+
+            <nav>
+                <h2 class="menuBx"><a href="">Menu &equiv;</Menu></a></h2>
+                <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article class="limit conteudo">
+            <h2 class="contato">Contatos</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit quo unde ea numquam perspiciatis nisi at. Repellendus iste laudantium beatae. Iusto repellendus placeat laboriosam. Neque fugiat corporis sed iusto dolores a rerum molestiae fugit in quaerat nisi quidem delectus reprehenderit accusamus vero iure ex culpa ullam, aut qui. Dolorem, similique.</p>
+
+            
+            <form action="processa.php" method="post" autocomplete="off">
+                <div>
+                    <!-- Nome -->
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+
+                <div>
+                    <!-- Email -->
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div>
+                    <!-- Data de Nascimento -->
+                    <label for="data">Data de Nascimento:</label>
+                    <input type="date" name="data" id="data">
+                </div>
+
+                <div>
+                    <!-- Telefone -->
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone">
+                </div>
+
+                <div>
+                    <!-- Assunto -->
+                    <label for="assunto">Assunto</label>
+                    <input type="text" name="assunto" id="assunto">
+                </div>
+
+                <div>
+                    <!-- Mensagem -->
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                </div>
+
+            </form>
+
+
+        </article>
+
+
+    </main>
+
+
+    <footer>
+        <p>Simplicity é um site fictício desenvolvido para fins educacionais &copy; <b>Senac Penha</b> - <time>2023</time> </p>
+    </footer>
+    
+</body>
+</html>
