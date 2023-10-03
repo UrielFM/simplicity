@@ -296,10 +296,10 @@ td:last-child::before {
     position: absolute;
     left: 10px;
 }
+.produtos::after { content: " 🛒";}
 
-.produtos::after { content: " 💸";}
 .serviços::after { content: " 👨‍💻";}
-.contato::after {}
+.contato::after {content: " 💌";}
 
 .imgBx{text-align: center;}
 
