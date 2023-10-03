@@ -308,12 +308,14 @@ td:last-child::before {
     align-items: center;
     transition: 1s;
     transform: scale(0.8);
+    filter: blur(2px) brightness(80%);
 }
 
 /* Aplicamos o :hover e o :focus ao seletor tag "a" em vez de aplicar no "img". Desta forma, o acionamento funcionará tanto com mouse quanto com teclado */
 .imgBx a:hover img, .imgBx a:focus img {
     transform: scale(1);
     border-radius: 0; 
+    filter: blur(0);
  }
 
 
