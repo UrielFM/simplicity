@@ -295,7 +295,23 @@ td:last-child::before {
     left: 10px;
 }
 
-.conteudo h2::after { content: "💸 ";}
+.produtos::after { content: " 💸";}
+.serviços::after { content: " 👨‍💻";}
+
+.imgBx{text-align: center;}
+
+.imgBx img{
+    margin: 0;
+    border-radius: 100px;
+    align-items: center;
+    transition: 1s;
+    transform: scale(0.8);
+}
+.imgBx img:hover {
+    filter: none;
+    transform: scale(1);
+    border-radius: 0; 
+ }
 
 
 /* Medias Query Gerais */
