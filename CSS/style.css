@@ -287,6 +287,17 @@ th:first-child{text-align: left;}
 
 tr:nth-child(even) { background-color: var(--cor-clara);}
 
+/* Colocar o R$ com CSS com um Pseudo-elemento ::before(depois) ou ::after(antes)*/
+td:last-child {position: relative;}
+td:last-child::before { 
+    content: "R$ ";
+    position: absolute;
+    left: 10px;
+}
+
+.conteudo h2::after { content: "💸 ";}
+
+
 /* Medias Query Gerais */
 @media screen and (min-width: 570px) {
 
