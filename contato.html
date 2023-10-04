@@ -39,39 +39,55 @@
                 <div>
                     <!-- Nome -->
                     <label for="nome">Nome:</label>
+                    <br>
                     <input type="text" name="nome" id="nome">
                 </div>
 
                 <div>
                     <!-- Email -->
                     <label for="email">E-mail:</label>
+                    <br>
                     <input type="email" name="email" id="email">
                 </div>
 
                 <div>
                     <!-- Data de Nascimento -->
                     <label for="data">Data de Nascimento:</label>
+                    <br>
                     <input type="date" name="data" id="data">
                 </div>
 
                 <div>
                     <!-- Telefone -->
                     <label for="telefone">Telefone:</label>
+                    <br>
                     <input type="tel" name="telefone" id="telefone">
                 </div>
 
                 <div>
                     <!-- Assunto -->
                     <label for="assunto">Assunto:</label>
-                    <input type="text" name="assunto" id="assunto">
+                    <br>
+                    <select name="assunto" id="assunto">
+                      <option value=""></option>
+                      <option>Dúvidas</option>
+                      <option>Elogios</option>
+                      <option>Reclamações</option>
+                      <option>Outro</option>
+                    </select>
                 </div>
 
                 <div>
                     <!-- Mensagem -->
                     <label for="mensagem">Mensagem:</label>
+                    <br>
                     <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
                 </div>
 
+                <div>
+                    <!-- Botão Enviar -->
+                    <button type="submit">Enviar</button>
+                </div>
             </form>
 
 
