@@ -317,7 +317,57 @@ td:last-child::before {
     transform: scale(1);
     border-radius: 0; 
     filter: blur(0);
- }
+}
+
+form{
+    max-width: 500px;
+    margin: auto;
+}
+
+input, select, textarea {
+    border: none;
+    padding: 5px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+textarea {height: auto;}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 30%;
+}
+
+button {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    border: none;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: var(--cor-clara);
+    color: var(--cor-escura);
+    box-shadow: var(--cor-escura) 0 0 4px;
+}
+
+
+/* Pseudo-classe :not() 
+Permite criar exceções para uma regra.
+Neste exemplo, estamos aplicando 70% de largura 
+para tudo(*) dentro do "form div" Execto o "label".*/
+form div *:not(label) { width: 70%}
 
 
 /* Medias Query Gerais */
@@ -344,9 +394,6 @@ td:last-child::before {
 
 }
 
-form{
-    margin: 10px;
-}
 
 @media screen and (min-width: 900px) {
 
