@@ -47,7 +47,8 @@
                     <!-- Email -->
                     <label for="email">E-mail:</label>
                     <br>
-                    <input type="email" name="email" id="email" required placeholder="exemplo@simplicity.com">
+                    <input type="email" name="email" id="email" 
+                     placeholder="exemplo@simplicity.com">
                 </div>
 
                 <div>
@@ -57,18 +58,45 @@
                     <input type="date" name="data" id="data">
                 </div>
 
+                <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
+                <div>
+                    <label for="cep">CEP: <br><span id="status"></span></label>
+                    <div id="area-do-cep">
+                        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="8" inputmode="numeric" required> <br>
+                        <button id="buscar">Buscar</button>
+                    </div>
+                </div>
+                <div>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" size="30">
+                </div>
+                <div>
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+                <div>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div>
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado">
+                </div>
+                <!-- /FIM HTML PARA CEP/ENDEREÇO --> 
+
+
                 <div>
                     <!-- Telefone -->
                     <label for="telefone">Telefone:</label>
                     <br>
-                    <input type="tel" name="telefone" id="telefone" required placeholder="xx xxxxx-xxxx ">
+                    <input type="tel" name="telefone" id="telefone" placeholder="xx xxxxx-xxxx ">
                 </div>
 
                 <div>
                     <!-- Assunto -->
                     <label for="assunto">Assunto:</label>
                     <br>
-                    <select name="assunto" id="assunto" required>
+                    <select name="assunto" id="assunto" >
                       <option value=""></option>
                       <option>Dúvidas</option>
                       <option>Elogios</option>
@@ -81,7 +109,7 @@
                     <!-- Mensagem -->
                     <label for="mensagem">Mensagem:</label>
                     <br>
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" required></textarea>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" ></textarea>
                 </div>
 
                 <div>
@@ -103,6 +131,6 @@
     </footer>
     
     <script src="js/menu.js"></script>
-    
+
 </body>
 </html>
