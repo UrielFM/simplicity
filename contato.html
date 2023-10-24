@@ -61,44 +61,44 @@
                 </div>
 
                 <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
-                
+
                 <!-- Cep -->
                 <div>
                     <label for="cep">CEP: <br><span id="status"></span></label>
                     <div id="area-do-cep">
-                        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="8" inputmode="numeric" required> <br>
+                        <input placeholder="Somente números" type="text" id="cep" name="cep" maxlength="9" inputmode="numeric" required> <br>
                         <button id="buscar">Buscar</button>
                     </div>
                 </div>
                 <!-- Endereço -->
-                <div>
+                <div class="exemplo">
                     <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" size="30">
+                    <input readonly type="text" id="endereco" name="endereco" size="30">
                 </div>
                 <!-- Número -->
-                <div>
+                <div class="exemplo">
                     <label for="numero">Número:</label>
                     <input type="text" id="numero" name="numero">
                 </div>
                 <!-- Complemento -->
-                <div>
+                <div class="exemplo">
                     <label for="complemento">Complemento:</label>
                     <input type="text" id="complemento" name="complemento">
                 </div>
                 <!-- Bairro -->
-                <div>
+                <div class="exemplo">
                     <label for="bairro">Bairro:</label>
-                    <input type="text" id="bairro" name="bairro">
+                    <input readonly type="text" id="bairro" name="bairro">
                 </div>
                 <!-- Cidade -->
-                <div>
+                <div class="exemplo">
                     <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade">
+                    <input readonly type="text" id="cidade" name="cidade">
                 </div>
                 <!-- Estado -->
-                <div>
+                <div class="exemplo">
                     <label for="estado">Estado:</label>
-                    <input type="text" id="estado" name="estado">
+                    <input readonly type="text" id="estado" name="estado">
                 </div>
                 <!-- /FIM HTML PARA CEP/ENDEREÇO --> 
 
@@ -107,7 +107,7 @@
                     <!-- Telefone -->
                     <label for="telefone">Telefone:</label>
                     <br>
-                    <input type="tel" name="telefone" id="telefone" placeholder="xx xxxxx-xxxx ">
+                    <input type="tel" name="telefone" id="telefone" placeholder="(00) 0000-0000 ">
                 </div>
 
                 <div>
@@ -148,6 +148,12 @@
         <p>Simplicity é um site fictício desenvolvido para fins educacionais &copy; <b>Senac Penha</b> - <time>2023</time> </p>
     </footer>
     
+<!-- Importação da biblioteca jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<!-- Importação do plugin/extensão jQuery Mask -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
     <script src="js/menu.js"></script>
     <script src="js/contato.js"></script>
 

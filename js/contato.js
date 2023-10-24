@@ -11,6 +11,15 @@ const campoEstado = formulario.querySelector("#estado");
 const botaoBuscar = formulario.querySelector("#buscar");
 const mensagem = formulario.querySelector("#status");
 
+// Seleção do campo telefone usando JS PURO
+// const campoTelefone = formulario.querySelector("#telefone");
+
+// Seleção do campo telefone usando JQuery
+const campoTelefone = $("#telefone");
+
+// Ativando a máscara para o telefone
+$(campoTelefone).mask("(00) 0000-0000"); // exemplo: (11) 2135-0300
+$(campoCep).mask("00000-000");
 
 // Detectando o evento de click no botão buscar
 botaoBuscar.addEventListener("click", async function (event) {
@@ -22,7 +31,7 @@ botaoBuscar.addEventListener("click", async function (event) {
     /* Verificando se o CEP Não tem 8 digitos.
     O operador !== significa "diferente de".*/
 
-    if (campoCep.value.length !== 8){
+    if (campoCep.value.length !== 9){
         // Alerte o ussuraior sobre o erro de digitação
         mensagem.textContent = "CEP Inválido!";
         mensagem.style.color = "red";
@@ -62,6 +71,11 @@ botaoBuscar.addEventListener("click", async function (event) {
         mensagem.style.color = "white";
         mensagem.style.backgroundColor = "green";  
 
+
+        const exemplos = document.querySelectorAll(".exemplo");
+        for(const exemplo of exemplos){
+            exemplo.classList.remove("exemplo");
+        }
         
         campoEnderco.value = dados.logradouro;
         campoBairro.value = dados.bairro;
