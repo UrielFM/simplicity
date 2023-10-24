@@ -21,6 +21,7 @@
                 <h2 class="menuBx"><a href="">Menu &equiv;</Menu></a></h2>
                 <ul class="menu">
                 <li><a href="index.html">Home</a></li>
+
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
                 <li><a href="contato.html">Contato</a></li>
@@ -36,7 +37,7 @@
 
             
             <form action="processa.php" method="post" autocomplete="off" data-netlify="true">
-                
+
                 <div>
                     <!-- Nome -->
                     <label for="nome">Nome:</label>
@@ -60,6 +61,8 @@
                 </div>
 
                 <!-- INÍCIO HTML PARA CEP/ENDEREÇO -->
+                
+                <!-- Cep -->
                 <div>
                     <label for="cep">CEP: <br><span id="status"></span></label>
                     <div id="area-do-cep">
@@ -67,18 +70,32 @@
                         <button id="buscar">Buscar</button>
                     </div>
                 </div>
+                <!-- Endereço -->
                 <div>
                     <label for="endereco">Endereço:</label>
                     <input type="text" id="endereco" name="endereco" size="30">
                 </div>
+                <!-- Número -->
+                <div>
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero">
+                </div>
+                <!-- Complemento -->
+                <div>
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+                <!-- Bairro -->
                 <div>
                     <label for="bairro">Bairro:</label>
                     <input type="text" id="bairro" name="bairro">
                 </div>
+                <!-- Cidade -->
                 <div>
                     <label for="cidade">Cidade:</label>
                     <input type="text" id="cidade" name="cidade">
                 </div>
+                <!-- Estado -->
                 <div>
                     <label for="estado">Estado:</label>
                     <input type="text" id="estado" name="estado">

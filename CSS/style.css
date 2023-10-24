@@ -367,7 +367,10 @@ button:hover, button:focus {
 #buscar {
     width: 38%;
     padding: 9px;
+    
 }
+
+#status {font-size: 12px;}
 
 
 
