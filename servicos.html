@@ -6,7 +6,10 @@
     <title>Serviços - Simplicity</title>
     
     <!-- CSS Externo -->
+    <link href="lightbox/css/lightbox.min.css" rel="stylesheet" />
+    
     <link rel="stylesheet" href="CSS/style.css">
+    
 
 </head>
 
@@ -40,10 +43,18 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit excepturi eos soluta consequatur iure neque ipsam deleniti! Consectetur eius dolore, totam reiciendis, commodi doloremque veritatis provident deleniti expedita ipsa mollitia?</p>
 
             <figure class="imgBx">
-                <a href="./img/desenvolvimento-web.jpg"><img src="./img/desenvolvimento-web-mini.jpg" alt=""></a>
-                <a href="./img/design-grafico.jpg"><img src="./img/design-grafico-mini.jpg" alt=""></a>
-                <a href="./img/marketing-digital.jpg"><img src="./img/marketing-digital-mini.jpg" alt=""></a>
-                <a href="./img/consultoria-treinamento.jpg"><img src="./img/consultoria-treinamento-mini.jpg" alt=""></a>
+                <a href="./img/desenvolvimento-web.jpg" data-lightbox="galeria">
+                    <img src="./img/desenvolvimento-web-mini.jpg" alt=""></a>
+
+                <a href="./img/design-grafico.jpg" data-lightbox="galeria">
+                    <img src="./img/design-grafico-mini.jpg" alt=""></a>
+
+                <a href="./img/marketing-digital.jpg" data-lightbox="galeria">
+                    <img src="./img/marketing-digital-mini.jpg" alt=""></a>
+
+                <a href="./img/consultoria-treinamento.jpg" data-lightbox="galeria">
+                    <img src="./img/consultoria-treinamento-mini.jpg" alt=""></a>
+
             </figure>
             
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore dolores repudiandae unde explicabo ab molestias voluptates. Blanditiis accusamus soluta minus adipisci, vel unde praesentium harum aut reiciendis eum voluptatum voluptas!</p>
@@ -62,6 +73,15 @@
         <p>Simplicity é um site fictício desenvolvido para fins educacionais &copy; <b>Senac Penha</b> - <time>2023</time> </p>
     </footer>
     
+    <!-- Importação da biblioteca jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Importação do plugin/extensão jQuery Mask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <!-- Importação do JS do PLugin/extensão LightBox -->
+    <script src="lightbox/js/lightbox.min.js"></script>
+
     <script src="js/menu.js"></script>
     
 </body>
