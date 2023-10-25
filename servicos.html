@@ -42,17 +42,18 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In saepe quisquam tempora corrupti reiciendis, aspernatur fugit quia, enim non nihil accusamus incidunt excepturi hic fugiat, laboriosam cum sint eveniet. Maxime.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit excepturi eos soluta consequatur iure neque ipsam deleniti! Consectetur eius dolore, totam reiciendis, commodi doloremque veritatis provident deleniti expedita ipsa mollitia?</p>
 
+            
             <figure class="imgBx">
-                <a href="./img/desenvolvimento-web.jpg" data-lightbox="galeria">
+                <a data-title="Desenvolvido de sites" href="./img/desenvolvimento-web.jpg" data-lightbox="galeria">
                     <img src="./img/desenvolvimento-web-mini.jpg" alt=""></a>
 
-                <a href="./img/design-grafico.jpg" data-lightbox="galeria">
+                <a data-title="Design gráfico impactante." href="./img/design-grafico.jpg" data-lightbox="galeria">
                     <img src="./img/design-grafico-mini.jpg" alt=""></a>
 
-                <a href="./img/marketing-digital.jpg" data-lightbox="galeria">
+                <a data-title="Venda e convença" href="./img/marketing-digital.jpg" data-lightbox="galeria">
                     <img src="./img/marketing-digital-mini.jpg" alt=""></a>
 
-                <a href="./img/consultoria-treinamento.jpg" data-lightbox="galeria">
+                <a data-title="Prepare-se para o mercado" href="./img/consultoria-treinamento.jpg" data-lightbox="galeria">
                     <img src="./img/consultoria-treinamento-mini.jpg" alt=""></a>
 
             </figure>
@@ -81,6 +82,12 @@
 
     <!-- Importação do JS do PLugin/extensão LightBox -->
     <script src="lightbox/js/lightbox.min.js"></script>
+
+    <script>
+        lightbox.option({
+            albumLabel: "Imagem %1 de %2";
+        });
+    </script>
 
     <script src="js/menu.js"></script>
     
