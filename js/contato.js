@@ -23,66 +23,66 @@ $(campoCep).mask("00000-000");
 
 // Detectando o evento de click no botão buscar
 botaoBuscar.addEventListener("click", async function (event) {
-    event.preventDefault();
-    
+  event.preventDefault();
 
-    let cep;  //undefined
 
-    /* Verificando se o CEP Não tem 8 digitos.
-    O operador !== significa "diferente de".*/
+  let cep;  //undefined
 
-    if (campoCep.value.length !== 9){
-        // Alerte o ussuraior sobre o erro de digitação
-        mensagem.textContent = "CEP Inválido!";
-        mensagem.style.color = "red";
-        mensagem.style.backgroundColor = "yellow";
-        
-        // Pare a execução
-        return;
+  /* Verificando se o CEP Não tem 8 digitos.
+  O operador !== significa "diferente de".*/
 
-    } else {
-        // Caso contrário(ou seja, tem 8 digitos), guarde o valor
-        cep = campoCep.value;
-    
+  if (campoCep.value.length !== 9) {
+    // Alerte o ussuraior sobre o erro de digitação
+    mensagem.textContent = "CEP Inválido!";
+    mensagem.style.color = "red";
+    mensagem.style.backgroundColor = "yellow";
+
+    // Pare a execução
+    return;
+
+  } else {
+    // Caso contrário(ou seja, tem 8 digitos), guarde o valor
+    cep = campoCep.value;
+
+  }
+
+  /* AJAX -> Técnica de comunicação assincrona para acessar uma API (www.viacep.com.br) */
+
+  // Etapa 1: preparar a URL da API com o CEP digitado
+  const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+  // Etapa 2: acessar a API (com URL) e aguardadr o retorno dela
+
+  const resposta = await fetch(url);
+
+  // Etapa 3: extrair os dados da respota em formato JSON
+
+  const dados = await resposta.json();
+
+  // Etapa 4: lidar com os dados de reposta (em caso de erro ou sucesso)
+
+  if ("erro" in dados) {
+    mensagem.textContent = "CEP Inexistente!"
+    mensagem.style.color = "white";
+    mensagem.style.backgroundColor = "red";
+
+  } else {
+    mensagem.textContent = "CEP Encotrado"
+    mensagem.style.color = "white";
+    mensagem.style.backgroundColor = "green";
+
+
+    const exemplos = document.querySelectorAll(".exemplo");
+    for (const exemplo of exemplos) {
+      exemplo.classList.remove("exemplo");
     }
 
-    /* AJAX -> Técnica de comunicação assincrona para acessar uma API (www.viacep.com.br) */
+    campoEnderco.value = dados.logradouro;
+    campoBairro.value = dados.bairro;
+    campoCidade.value = dados.localidade;
+    campoEstado.value = dados.uf;
 
-    // Etapa 1: preparar a URL da API com o CEP digitado
-    const url = `https://viacep.com.br/ws/${cep}/json/`;
-
-    // Etapa 2: acessar a API (com URL) e aguardadr o retorno dela
-
-   const resposta = await fetch(url); 
-
-    // Etapa 3: extrair os dados da respota em formato JSON
-
-    const dados = await resposta.json();
-
-    // Etapa 4: lidar com os dados de reposta (em caso de erro ou sucesso)
-
-    if ("erro" in dados) {
-        mensagem.textContent = "CEP Inexistente!"
-        mensagem.style.color = "white";
-        mensagem.style.backgroundColor = "red";
-        
-    } else {
-        mensagem.textContent = "CEP Encotrado"
-        mensagem.style.color = "white";
-        mensagem.style.backgroundColor = "green";  
-
-
-        const exemplos = document.querySelectorAll(".exemplo");
-        for(const exemplo of exemplos){
-            exemplo.classList.remove("exemplo");
-        }
-        
-        campoEnderco.value = dados.logradouro;
-        campoBairro.value = dados.bairro;
-        campoCidade.value = dados.localidade;
-        campoEstado.value = dados.uf;
-
-    }
+  }
 
 
 
@@ -99,11 +99,11 @@ async function handleSubmit(event) {
     method: formulario.method,
     body: data,
     headers: {
-        'Accept': 'application/json'
+      'Accept': 'application/json'
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Olá, seja bem-vindo ao Simplicity! Responderemos sua mensagem o mais breve possivel. Obrigado por aguardar!";
+      status.innerHTML = "Olá, seja bem-vindo ao MRI Balanças! Responderemos sua mensagem o mais breve possivel. Obrigado por aguardar!";
       formulario.reset()
     } else {
       response.json().then(data => {
